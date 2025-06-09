@@ -1,0 +1,318 @@
+/* style.css - Version Améliorée */
+
+:root {
+    --main-bg-color: #f4f7f6; /* Arrière-plan général clair */
+    --header-footer-bg: #2c3e50; /* Bleu foncé pour en-tête/pied de page */
+    --accent-color: #3498db; /* Bleu vif pour les liens/bordures d'accent */
+    --text-color: #34495e; /* Gris-bleu foncé pour le texte principal */
+    --heading-color: #2980b9; /* Bleu moyen pour les titres */
+    --box-bg-light: #ecf0f1; /* Gris très clair pour les encadrés */
+    --box-bg-highlight: #e8f4f8; /* Bleu très clair pour les encadrés "highlight" */
+    --border-color: #bdc3c7; /* Gris clair pour les bordures générales */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth; /* Défilement doux */
+}
+
+.container {
+    width: 90%; /* Un peu plus large */
+    max-width: 1200px; /* Limite la largeur sur grands écrans */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: var(--header-footer-bg);
+    color: #fff;
+    padding-top: 20px; /* Moins de padding en haut */
+    min-height: 80px; /* Plus de hauteur */
+    border-bottom: 5px solid var(--accent-color); /* Bordure plus épaisse */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre pour le relief */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em; /* Plus grand */
+    letter-spacing: 1px; /* Espacement des lettres */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Ombre pour le relief du titre */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex; /* Utilise flexbox pour centrer */
+    justify-content: center; /* Centre les éléments de la navigation */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
+    margin-top: 15px; /* Espace sous le titre */
+}
+
+header nav ul li {
+    padding: 10px 25px; /* Plus de padding pour les liens */
+    margin: 5px; /* Espace entre les liens */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour les liens */
+}
+
+header nav ul li:hover {
+    background-color: rgba(255,255,255,0.1); /* Légère couleur au survol */
+    transform: translateY(-3px); /* Effet 3D léger au survol */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em; /* Taille plus grande */
+    font-weight: 600; /* Gras */
+    transition: color 0.3s ease; /* Transition pour la couleur des liens */
+}
+
+header a:hover {
+    color: var(--accent-color); /* Couleur d'accent au survol */
+}
+
+.main-content {
+    padding: 30px; /* Plus de padding */
+    background: #fff;
+    margin-top: 25px; /* Plus d'espace au-dessus */
+    border-radius: 10px; /* Bords plus arrondis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombre plus prononcée */
+}
+
+.main-content h2 {
+    color: var(--heading-color);
+    border-bottom: 3px solid var(--accent-color); /* Bordure plus épaisse et colorée */
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-size: 2.2em; /* Plus grand */
+    text-align: center; /* Centre les titres principaux */
+}
+
+.main-content h3 {
+    color: var(--heading-color);
+    border-bottom: 1px dashed var(--border-color); /* Bordure en pointillés */
+    padding-bottom: 8px;
+    margin-top: 40px; /* Plus d'espace au-dessus des sous-titres */
+    margin-bottom: 20px;
+    font-size: 1.6em; /* Plus grand */
+}
+
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto; /* Plus d'espace autour des images */
+    border-radius: 8px; /* Bords arrondis pour les images */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombre pour les images */
+    transition: transform 0.3s ease; /* Transition pour le survol des images */
+}
+
+.main-content img:hover {
+    transform: scale(1.02); /* Agrandissement léger au survol */
+}
+
+small {
+    display: block;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: -20px; /* Remonte légèrement sous l'image */
+    margin-bottom: 20px; /* Espace après le crédit */
+}
+
+footer {
+    padding: 25px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: var(--header-footer-bg);
+    text-align: center;
+    border-top: 5px solid var(--accent-color);
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+/* Styles spécifiques pour les sections */
+.section-intro {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 35px;
+    font-size: 1.2em; /* Plus grande taille pour l'intro */
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.list-details {
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0;
+}
+
+ul.list-details li {
+    background-color: var(--box-bg-light); /* Fond pour chaque élément de liste */
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-left: 5px solid var(--accent-color); /* Bordure colorée à gauche */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease; /* Transition au survol */
+}
+
+ul.list-details li:hover {
+    transform: translateX(5px); /* Glisse légèrement au survol */
+}
+
+ul.list-details li strong {
+    color: var(--heading-color); /* Couleur pour le texte en gras */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 1em; /* Taille plus grande */
+    min-width: 450px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Ombre plus marquée */
+    border-radius: 8px; /* Bords arrondis pour le tableau */
+    overflow: hidden; /* Important pour que le border-radius s'applique */
+}
+
+table thead tr {
+    background-color: var(--accent-color); /* En-tête de tableau avec couleur accent */
+    color: #ffffff;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 15px 18px; /* Plus de padding */
+    border: 1px solid var(--border-color); /* Bordures plus claires */
+}
+
+table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f8f8f8; /* Lignes paires légèrement grises */
+}
+
+table tbody tr:hover {
+    background-color: var(--box-bg-highlight); /* Couleur au survol des lignes */
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--accent-color); /* Bordure plus épaisse en bas */
+}
+
+/* NOUVEAUX STYLES POUR LES ENCADRÉS */
+
+.info-box {
+    background-color: var(--box-bg-light);
+    border: 1px solid var(--border-color);
+    border-left: 8px solid var(--heading-color); /* Bordure épaisse à gauche */
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 30px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.info-box p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.highlight-box {
+    background-color: var(--box-bg-highlight); /* Une couleur plus marquée */
+    border: 1px solid var(--accent-color);
+    border-left: 8px solid var(--accent-color); /* Bordure épaisse à gauche avec accent */
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    font-size: 1.15em;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.highlight-box:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: scale(1.01);
+}
+
+.highlight-box p {
+    margin: 0;
+    color: inherit; /* Hérite de la couleur du parent au survol */
+}
+
+/* RESPONSIVE DESIGN (pour les petits écrans) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Les liens du menu s'empilent */
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        padding: 8px 15px;
+        margin: 3px 0;
+        width: 80%; /* Occupe plus de largeur */
+    }
+
+    .main-content {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .main-content h2 {
+        font-size: 1.8em;
+        text-align: left;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+        margin-top: 30px;
+    }
+
+    .section-intro {
+        font-size: 1em;
+    }
+
+    table {
+        min-width: unset; /* Retire la largeur minimale */
+        display: block; /* Permet le défilement horizontal si le contenu est trop grand */
+        overflow-x: auto;
+    }
+}
