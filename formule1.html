@@ -48,8 +48,7 @@
                     <strong>Les Unités de Puissance V6 Turbo Hybrides :</strong> Les moteurs atmosphériques V8 ont été remplacés par des V6 turbo de 1.6 litre, combinés à des systèmes de récupération d'énergie sophistiqués.
                 </li>
             </ul>
-            <img src="images/f1-hybride-action.jpg" alt="Monoplace de Formule 1 hybride en pleine course">
-            <small>Crédit photo : (À insérer ici)</small>
+            <img src="images/2025_Japan_GP_-_Ferrari_-_Charles_Leclerc_-_FP1.jpg" alt="Monoplace de Formule 1 hybride Ferrari pilotée par Charles Leclerc sur circuit, vitesse élevée, tribunes en arrière-plan, ambiance compétitive" width="400" style="max-width:100%; height:auto;">
 
             <h3>5.2. Les Composants Hybrides Spécifiques en F1</h3>
             <p>Les Power Units de F1 intègrent des technologies hybrides uniques et très avancées :</p>
@@ -67,8 +66,42 @@
                     <strong>Électronique de Puissance :</strong> Des systèmes informatiques complexes gèrent le flux d'énergie entre les MGU, la batterie et les roues, avec une précision et une rapidité extrêmes.
                 </li>
             </ul>
-            <img src="images/schema-power-unit-f1.jpg" alt="Schéma détaillé de l'unité de puissance hybride de Formule 1">
-            <small>Crédit photo : (À insérer ici)</small>
+            <div style="display: flex; justify-content: center;">
+                <img
+                    id="f1-hybrid-schema"
+                    src="images/C9ifuVTW0AEG3EV.jpg"
+                    alt="Schéma détaillé des composants d'une unité de puissance hybride de Formule 1, avec moteur thermique V6 turbo, MGU-K, MGU-H, batterie haute performance et électronique de puissance, reliés par des flèches illustrant la circulation de l'énergie. Fond technique, ambiance pédagogique."
+                    width="300"
+                    style="max-width:100%; height:auto; cursor: pointer;"
+                    tabindex="0"
+                    aria-label="Agrandir le schéma des composants hybrides de Formule 1"
+                >
+            </div>
+            <!-- Modal plein écran pour l'image -->
+            <div id="modal-f1-schema" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center;">
+                <img src="images/C9ifuVTW0AEG3EV.jpg" alt="" style="max-width:90vw; max-height:90vh; box-shadow:0 0 24px #000;">
+            </div>
+            <script>
+                const img = document.getElementById('f1-hybrid-schema');
+                const modal = document.getElementById('modal-f1-schema');
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+                // Accessibilité : fermer avec Echap
+                document.addEventListener('keydown', (e) => {
+                    if (modal.style.display === 'flex' && e.key === 'Escape') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            </script>
 
             <h3>5.3. Fonctionnement et Impact sur la Performance</h3>
             <p>L'intégration de ces systèmes hybrides a radicalement changé la dynamique des courses de F1 :</p>
@@ -86,8 +119,12 @@
                     <strong>Défis Techniques :</strong> La complexité et la chaleur générée par ces systèmes posent des défis considérables en termes de refroidissement et de fiabilité.
                 </li>
             </ul>
-            <img src="images/tableau-bord-f1-hybride.jpg" alt="Tableau de bord d'une Formule 1 affichant des données hybrides">
-            <small>Crédit photo : (À insérer ici)</small>
+            <div style="display: flex; justify-content: center; margin: 24px 0;">
+                <video width="400" style="max-width:100%; height:auto;" controls>
+                    <source src="images/lv_0_20250625221208.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                </video>
+            </div>
 
             <h3>5.4. Transfert Technologique F1 → Voiture de Série</h3>
             <p>La Formule 1 n'est pas seulement un spectacle, c'est aussi un laboratoire roulant :</p>
