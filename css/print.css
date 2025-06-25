@@ -1,0 +1,85 @@
+/* css/print.css */
+
+/* --- Réinitialisation de base pour l'impression --- */
+body {
+    font-family: serif; /* Polices plus adaptées à l'impression */
+    font-size: 12pt; /* Taille de police standard pour le corps du texte */
+    color: #000; /* Texte noir sur fond blanc */
+    background: none; /* Pas de fond */
+    margin: 0; /* Pas de marge excessive */
+    padding: 0;
+}
+
+/* --- Masquer les éléments non pertinents pour l'impression --- */
+/* Masquer la barre de navigation */
+nav, .navbar, .menu, .header-top, .footer-menu {
+    display: none !important;
+}
+
+/* Masquer les pieds de page, sauf si vous voulez des infos de contact */
+footer, .footer-info {
+    display: none !important;
+}
+
+/* Masquer les boutons, formulaires, barres latérales, icônes sociales, etc. */
+button, .btn, form, aside, .social-links, .share-buttons, .ad-banner, .comment-section {
+    display: none !important;
+}
+
+/* Masquer les vidéos intégrées */
+iframe, video, embed {
+    display: none !important;
+}
+
+/* --- Optimisation du contenu --- */
+/* Assurer que les liens sont lisibles et impriment leur URL */
+a {
+    color: #000;
+    text-decoration: underline;
+}
+a[href]:after {
+    content: " (" attr(href) ")"; /* Affiche l'URL à côté du lien */
+    font-size: 9pt;
+}
+/* Ne pas afficher l'URL pour les liens internes au document */
+a[href^="#"]:after {
+    content: "";
+}
+
+/* Mettre les marges des pages imprimées */
+@page {
+    margin: 1cm; /* Marge autour de chaque page imprimée */
+}
+
+/* Forcer les sauts de page pour les grandes sections (si besoin) */
+h1, h2, h3 {
+    page-break-after: avoid; /* Évite qu'un titre soit en bas de page seul */
+}
+
+section, article {
+    page-break-inside: avoid; /* Évite qu'une section soit coupée au milieu si possible */
+}
+
+/* Ajuster les images pour l'impression (optionnel) */
+img {
+    max-width: 100% !important; /* Ne dépasse pas la largeur de la page */
+    display: block; /* S'assure que l'image est sur sa propre ligne */
+    margin: 0 auto; /* Centre l'image */
+}
+
+/* Assurer la visibilité du texte dans les zones sombres */
+/* Si vous avez des sections avec des fonds sombres et du texte clair */
+.dark-section {
+    background-color: #fff !important; /* Changer le fond en blanc */
+    color: #000 !important; /* Changer le texte en noir */
+}
+
+/* --- Pour une meilleure lisibilité des tableaux --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
